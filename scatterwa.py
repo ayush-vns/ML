@@ -2,14 +2,18 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-df = pd.read_csv("scatter.csv")
+# Load the CSV data
 
-x = df['random1'].values  # Generate 100 random values from a normal distribution with mean 0 and standard deviation 1
-y=df['random2'].values  # Calculate y values as a linear function of x plus some random noise
+df = pd.read_csv("scatterda.csv")
+
+# Extract values for the scatter plots
+x = df['random1'].values  # Values from column 'random1'
+
+y = df['random2'].values  # Values from column 'random2'
 
 # Generate two additional sets of random data
-z=df['random2'].values  # Generate 100 random values from a normal distribution with mean 1 and standard deviation 1.5
-w=df['random2'].values# Generate 100 random values from a normal distribution with mean -1 and standard deviation 0.5
+z = df['random3'].values  # Values from column 'random3'
+w = df['random4'].values  # Generate 100 random values from a normal distribution with mean -1 and standard deviation 0.5
 
 # Create a new figure and Axes object
 fig, ax = plt.subplots()
